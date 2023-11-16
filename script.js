@@ -14,7 +14,10 @@ form.addEventListener("submit", e => {
     k = Number(k);
 
     canvas.className = "invisible";
+
     const elementoMensagem = document.getElementById("error-message");
+    const elementoExplicacao = document.getElementById("explicacao");
+    elementoExplicacao.className = "invisible";
 
     if(k == 0)
         return ExibirMensagemErro("k deve ser diferente de 0", elementoMensagem);
@@ -31,7 +34,7 @@ form.addEventListener("submit", e => {
     if(myChart)
         myChart.destroy();
 
-    MostrarGrafico(canvas, tempCorpo, tempAmbiente, k);
+    MostrarGrafico(canvas, elementoExplicacao, tempCorpo, tempAmbiente, k);
     elementoMensagem.className="invisible";
 })
 
@@ -48,7 +51,12 @@ function DefinirComprimento(tempCorpo, tempAmbiente, k){
     }
 }
 
-function MostrarGrafico(canvas, tempCorpo, tempAmbiente, k){
+function AdcionarExplicacao(primeiraTemperatura, segundaTemperatura, primeiroTempo, segundoTempo, elementoExplicacao){
+    elementoExplicacao.innerHTML = `Como podemos ver no grafico acima, nos primeiros 10 minutos <span class="destaque">há ${primeiraTemperatura < 0 ? "uma perda" : "um ganho"} de ${Math.abs(primeiraTemperatura).toFixed(1)}°C</span>, enquanto entre o periodo de ${primeiroTempo} e ${segundoTempo} minutos, o que também são 10 minutos, o corpo <span class="destaque"> ${primeiraTemperatura < 0 ? "perde" : "ganha"} somente ${Math.abs(segundaTemperatura).toFixed(1)}°C</span>. Isso confirma aquilo que dizemos anteriormente, de que quanto maior a diferença de temperatura, mais rapido ele irá trocar calor com o ambiente. Fascinante!`;
+    elementoExplicacao.className = "";
+}
+
+function MostrarGrafico(canvas, elementoExplicacao, tempCorpo, tempAmbiente, k){
     const ctx = canvas.getContext('2d');
 
     canvas.className = "";
@@ -61,6 +69,8 @@ function MostrarGrafico(canvas, tempCorpo, tempAmbiente, k){
 
     const labels = Array.from({length: comprimento}, (_, i) => i);
     const data = labels.map(x => tempAmbiente + (tempCorpo - tempAmbiente) * Math.exp(-k*x));
+
+    AdcionarExplicacao(data[9]-data[0], data[comprimento/2+5]-data[comprimento/2-5], comprimento/2-5, comprimento/2+5, elementoExplicacao);
 
     myChart = new Chart(ctx, {
         type: 'line',

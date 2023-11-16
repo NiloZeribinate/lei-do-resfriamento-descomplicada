@@ -8,22 +8,22 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+    <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
+
     <script async src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
     <main>
         <header>
-            <div id="title">
-                <h1>Estimativas da idade da Terra, <br> Lei do Resfiramento e a Teoria da Evolução</h1>
+            <i id="terra">
+                <img src="image/nuvem-6.png">
+                <img src="image/nuvem-4.png">
+            </i>
 
-                <i id="termometro"></i>
-                
-                <i id="terra">
-                    <img src="image/nuvem-6.png">
-                    <img src="image/nuvem-4.png">
-                </i>
-            </div>
+            <h1>Estimativas da idade da Terra, <br> Lei do Resfiramento e a Teoria da Evolução</h1>
+
+            <i id="termometro"></i>
         </header>
 
         <section>
@@ -36,7 +36,7 @@
         <section>
             <h1>O que é a Lei de Resfriamento de Newton?</h1>
             <p>
-                Imagine que você tem uma pizza quentinha acabada de sair do forno. A <span class="destaque">Lei de Resfriamento de Newton</span>, criada por um senhor chamado <span class="destaque">Newton</span> (sim, o mesmo da maçã caindo!), nos ajuda a entender como a temperatura dessa pizza vai mudar com o tempo. Ela leva em conta a temperatura inicial da pizza, a temperatura do ambiente e algumas características especiais da pizza, como o tamanho da superfície e os ingredientes. Vamos espiar a fórmula mágica que explica tudo isso:
+                Imagine que você tem uma pizza quentinha acabada de sair do forno. A <span class="destaque">Lei de Resfriamento de Newton</span>, criada por um senhor chamado <span class="destaque">Newton</span> (sim, o mesmo da maçã caindo!), nos ajuda a entender como a temperatura dessa pizza vai mudar com o tempo. Ela leva em conta a temperatura inicial da pizza, a temperatura do ambiente e algumas características especiais da pizza, como o tamanho da superfície e os ingredientes. <span class="destaque">Vamos espiar a fórmula mágica que explica tudo isso:</span>
             </p>
 
             <div class="formula">
@@ -56,11 +56,12 @@
             </div>
 
             <p>
-                Aqui, T(t) é a temperatura em função do tempo em minutos, Ta é a temperatura ambiente, T0 é a temperatura inicial da pizza, k é uma característica especial da pizza, t é o tempo em minutos. Essa fórmula nos ajuda a visualizar como a temperatura da pizza vai se comportar ao longo do tempo.
+                Aqui, T(t) é a <span class="destaque">temperatura em função do tempo</span> em minutos, Ta é a <span class="destaque">temperatura ambiente</span>, T0 é a <span class="destaque">temperatura inicial</span> da pizza, k é <span class="destaque">uma característica especial</span> da pizza, t é o <span class="destaque">tempo em minutos</span>. Essa fórmula nos ajuda a visualizar como a temperatura da pizza vai se comportar ao longo do tempo.
             </p>
 
-            <p>Antes de embarcarmos nessa jornada, vamos colocar a mão na massa (ou melhor, na fórmula!) e experimentar por nós mesmos a Lei de Resfriamento de Newton. Abaixo, você encontrará um formulário onde poderá inserir os dados necessários. Depois, um gráfico mostrará como a temperatura do objeto evolui ao longo do tempo. Vamos lá, experimente e descubra como a temperatura se comporta nesse processo fascinante!</p>
+            <h1>Sua vez de tentar!</h1>
 
+            <p>Antes de embarcarmos nessa jornada, <span class="destaque">vamos colocar a mão na massa</span> (ou melhor, na fórmula!) e experimentar por nós mesmos a Lei de Resfriamento de Newton. Abaixo, você encontrará um formulário onde poderá inserir os dados necessários. Depois, um gráfico mostrará como a temperatura do objeto evolui ao longo do tempo. <span class="destaque">Vamos lá, experimente</span> e descubra como a temperatura se comporta nesse processo <span class="destaque">fascinante</span>!</p>
             
             <form id="form">
                 <div class="form-item">
@@ -83,7 +84,12 @@
             </form>
     
             <p class="invisible" id="error-message">O valor de k deve ser diferente de 0</p>
+            <p id="mobile-warning">Para melhor vizualização do grafico, recomendamos que você coloque o seu celular na horizontal</p>
             <canvas id="myChart" class="invisible"></canvas>
+
+            <p class="invisible" id="explicacao">
+                Como podemos ver no grafico acima, nos primeiros 10 minutos há um perda de x°C, euquanto entre o periodo de 30 e 40 minutos são perdidos somente y°C
+            </p>
         </section>
 
         <section>
@@ -95,15 +101,15 @@
             <h2>A Surpreendente Teoria da Evolução!</h2>
 
             <p>
-                Antes de explorarmos as incríveis tentativas de estimar a idade da Terra, vamos fazer uma breve parada para apreciar uma das teorias mais revolucionárias da história da ciência: a Teoria da Evolução! Essa ideia incrível, proposta por Charles Darwin, sugere que todas as formas de vida na Terra compartilham um ancestral comum e que as espécies mudam ao longo do tempo por meio de um processo de seleção natural.
+                Antes de explorarmos as incríveis tentativas de estimar a idade da Terra, vamos fazer uma breve parada para apreciar uma das teorias mais revolucionárias da história da ciência: <span class="destaque">a Teoria da Evolução!</span> Essa ideia incrível, proposta por Charles Darwin, sugere que todas as formas de vida na Terra compartilham um ancestral comum e que as espécies mudam ao longo do tempo por meio de um <span class="destaque">processo de seleção natural</span>.
             </p>
 
             <p>
-                Imagine um grande quebra-cabeça da vida, onde cada espécie é uma peça única e especial. A Teoria da Evolução nos mostra como essas peças se encaixam ao longo das eras, adaptando-se às mudanças em seus ambientes. Esse processo, no entanto, não acontece da noite para o dia, mas sim ao longo de vastos períodos de tempo. É como um épico jogo de sobrevivência, onde as criaturas mais bem adaptadas têm a chance de passar suas características para as gerações futuras. E a melhor parte? Essa teoria não é apenas uma ideia maluca, mas é apoiada por uma montanha de evidências científicas!
+                Imagine um grande quebra-cabeça da vida, onde cada espécie é uma peça única e especial. A Teoria da Evolução nos mostra como essas peças se encaixam ao longo das eras, adaptando-se às mudanças em seus ambientes. Esse processo, no entanto, não acontece da noite para o dia, mas sim <span class="destaque">ao longo de vastos períodos de tempo</span>. É como um épico jogo de sobrevivência, onde as criaturas mais bem adaptadas têm a chance de passar suas características para as gerações futuras. E a melhor parte? Essa teoria não é apenas uma ideia maluca, mas é apoiada por uma <span class="destaque">montanha de evidências científicas</span>!
             </p>
 
             <p>
-                Agora que você já entendeu sobre a Teoria da Evolução, vamos dar uma espiada nas tentativas intrigantes de estimar a idade da Terra.
+                Agora que você já entendeu sobre a Teoria da Evolução, vamos dar uma espiada nas <span class="destaque">tentativas intrigantes de estimar a idade da Terra</span>.
             </p>
 
             <h2>Explorando as Medidas do Passado:</h2>
@@ -115,17 +121,17 @@
             <h3>Registros Bíblicos: James Ussher (1654)</h3>
 
             <p>
-                No século XVII, o Arcebispo irlandês James Ussher mergulhou nas histórias das famílias bíblicas. Com uma calculadora rudimentar e muita paciência, ele estimou o número de gerações e somou as idades dos personagens bíblicos. Com surpreendente precisão, Ussher concluiu que a Terra se formou na manhã de 23 de outubro de 4004 a.C. Isso mesmo, ele estimou que a Terra tinha cerca de 6 mil anos. 
+                No século XVII, o Arcebispo irlandês James Ussher mergulhou nas histórias das <span class="destaque">famílias bíblicas</span>. Com uma calculadora rudimentar e muita paciência, ele estimou o número de gerações e somou as idades dos personagens bíblicos. Com surpreendente precisão, Ussher concluiu que a Terra se formou na manhã de 23 de outubro de 4004 a.C. Isso mesmo, ele <span class="destaque">estimou que a Terra tinha cerca de 6 mil anos.</span> 
             </p>
 
             <h3>Tempo de Resfriamento da Terra: Buffon e Lord Kelvin</h3>
 
             <p>
-                No século XVIII, o Conde de Buffon, George-Louis Leclerc, aqueceu bolas de ferro para entender o tempo de resfriamento da Terra. Ao extrapolar seus resultados para as dimensões terrestres, ele chegou à estimativa de 75 mil anos para a idade do nosso querido planeta.
+                No século XVIII, o Conde de Buffon, George-Louis Leclerc, aqueceu <span class="destaque">bolas de ferro</span> para entender o tempo de resfriamento da Terra. Ao extrapolar seus resultados para as dimensões terrestres, ele chegou à estimativa de <span class="destaque">75 mil anos para a idade do nosso querido planeta</span>.
             </p>
 
             <p>
-                Um século depois, Lord Kelvin, também conhecido como William Thompson, trouxe sua inteligência para a mesa. Estudando a condutividade térmica de rochas, ele calculou a temperatura interna da Terra e, consequentemente, sua taxa de resfriamento. Suas conclusões variaram entre 20 e 400 milhões de anos. E aqui surge o grande problema...
+                Um século depois, <span class="destaque">Lord Kelvin</span>, também conhecido como William Thompson, trouxe sua inteligência para a mesa. Estudando a <span class="destaque">condutividade térmica de rochas</span>, ele calculou a temperatura interna da Terra e, consequentemente, sua taxa de resfriamento. Suas conclusões variaram <span class="destaque">entre 20 e 400 milhões de anos.</span> E aqui surge o <span class="destaque">grande</span> problema...
             </p>
         </section>
 
@@ -133,23 +139,23 @@
             <h1>Será que o nosso amigo Darwin deu uma derrapada??</h1>
 
             <p>
-                Como dizemos anteriormente, para que a evolução acontecesse levaria um periodo muuuito longo de tempo, tempo esse que superaria as estimativas do nosso amigo Lorde Kelvin.
+                Como dizemos anteriormente, para que a evolução acontecesse levaria um <span class="destaque">periodo muuuito longo de tempo</span>, tempo esse que superaria as estimativas do nosso amigo Lorde Kelvin.
             </p>
 
             <h2>"Então a Teoria da Evolução está errada??"</h2>
 
             <p>
-                Calma, precisamos considerar uma coisa muito importante: a época em que essas estimativas foram feitas. No século 19, não havia tecnologia avançada como a que temos hoje, além disso eles ainda não conheciam algo crucial para essas estimativas... a radiação.
+                Calma, precisamos considerar uma coisa muito importante: a época em que essas estimativas foram feitas. No século 19, não havia tecnologia avançada como a que temos hoje, além disso eles ainda não conheciam algo crucial para essas estimativas... <span class="destaque">a radiação</span>.
             </p>
 
             <h2>Radiação: A Descoberta que Mudou Tudo!</h2>
 
             <p>
-                Em 1896, algo essencial foi descoberto: a radiação, mais especificamente o raio-X. Isso nos ajudou a entender como os elementos radioativos se transformam com o tempo. Com essa descoberta, Ernest Rutherford e Bertram Boltwood conseguiram estimar de uma rocha do período Ordoviciano em 400 milhões de anos – quatro vezes a idade da Terra postulada por Kelvin. Hoje sabemos que essas rochas têm 485 milhões de anos, o que é incrível!
+                Em 1896, algo essencial foi descoberto: a radiação, mais especificamente <span class="destaque">o raio-X</span>. Isso nos ajudou a entender como os elementos radioativos se transformam com o tempo. Com essa descoberta, Ernest Rutherford e Bertram Boltwood conseguiram <span class="destaque">estimar de uma rocha do período Ordoviciano em 400 milhões de anos</span> – a maior estimativa da idade da Terra postulada por Kelvin. Hoje sabemos que essas rochas <span class="destaque">têm 485 milhões de anos</span>, o que é incrível!
             </p>
 
             <p>
-                Atualmente, com a tecnologia avançada que temos, estimamos a idade da Terra em 4,5 bilhões de anos. Isso significa que a Terra teve tempo de sobra para os seres vivos surgirem e se diversificarem até os dias de hoje, com uma enorme variedade de filos, famílias, espécies e muito mais!
+                Atualmente, com a tecnologia avançada que temos, estimamos <span class="destaque">a idade da Terra em 4,5 bilhões de anos</span>. Isso significa que a Terra teve <span class="destaque">tempo de sobra</span> para os seres vivos surgirem e se diversificarem até os dias de hoje, com uma enorme variedade de filos, famílias, espécies e muito mais!
             </p>
         </section>
     </main>
@@ -157,8 +163,8 @@
     <footer>
         <p>Conteúdo elaborado por Francisco Pessoa, Igor Lopes, Maria Eduarda Holanda, Milena Margalho, Nilo Zeribinate, Rayanna La Torre</p>
         <p>Site desenvolvido por Nilo Zeribinate</p>
-        <a href="#instagram"><i>Instagram</i></a>
-        <a href="#github"><i>GitHub</i></a>
+        <a href="https://www.instagram.com/nilo_zeribinate" target="_blank"><i>Instagram</i></a>
+        <a href="https://github.com/NiloZeribinate/" target="_blank"><i>GitHub</i></a>
     </footer>
 
     <script src="script.js"></script>

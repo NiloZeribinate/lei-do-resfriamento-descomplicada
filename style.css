@@ -46,16 +46,10 @@ main{
 }
 
 header{
-    margin-top: 20px;
+    margin-top: 25px 0;
 
     width: 100%;
     position: relative;
-}
-
-header #title{
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 25px;
 }
 
 header h1{
@@ -204,6 +198,38 @@ form #submit{
     font-size: 1.4rem;
 
     cursor: pointer;
+}
+
+#mobile-warning{
+    display: none;
+    color: var(--red);
+    text-align: center;
+}
+
+footer{
+    padding: 15px;
+    text-align: center;
+}
+
+
+@media (max-width: 1150px) {
+    :root{
+        font-size: 14px;
+    }
+
+    header i{
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    form{
+        flex-direction: column;
+    }
+
+    #mobile-warning{
+        display: inline-block;
+    }
 }
 
 
